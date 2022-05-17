@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 
 export type EasingMode =
@@ -95,4 +95,6 @@ export interface CollapsibleProps {
   onAnimationEnd?: () => void;
 }
 
-export default class Collapsible extends React.Component<CollapsibleProps> {}
+export default class Collapsible extends React.Component<
+  React.PropsWithChildren<CollapsibleProps>
+> {}

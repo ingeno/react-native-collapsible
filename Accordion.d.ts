@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 import { StyleProp, ViewStyle } from 'react-native';
 import { EasingMode } from './index';
 
@@ -143,4 +143,6 @@ export interface AccordionProps<T> {
   renderAsFlatList?: boolean;
 }
 
-export default class Accordion<T> extends React.Component<AccordionProps<T>> {}
+export default class Accordion<T> extends React.Component<
+  React.PropsWithChildren<AccordionProps<T>>
+> {}
